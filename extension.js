@@ -1295,8 +1295,8 @@
 	var settings = {
 		botName: "BlexBot",
 		language: "portuguese",
-		chatLink: "https://rawgit.com/stiefanow89/CB/master/pt-BR.json",
-		scriptLink: "https://rawgit.com/stiefanow89/CB/master/extension.js",
+		chatLink: "https://rawgit.com/dawidstefanski375/CB/master/pt-BR.json",
+		scriptLink: "https://rawgit.com/dawidstefanski375/CB/master/extension.js",
 		playLive: true,
 		roomLock: false,
 		startupCap: 1,
@@ -1359,12 +1359,12 @@
 		commandLiteral: "!",
 		blacklists: {
 			NSFW: null,
-			OP: "https://rawgit.com/stiefanow89/CB/master/OPlist.json",
-			BANNED: "https://rawgit.com/stiefanow89/CB/master/BANNEDlist.json"
+			OP: "https://rawgit.com/dawidstefanski375/CB/master/OPlist.json",
+			BANNED: "https://rawgit.com/dawidstefanski375/CB/master/BANNEDlist.json"
 		}
 	};
 	settings.intervalMessages.push('Join us on discord ! '+settings.discordLink);
 	localStorage.setItem('basicBotsettings', JSON.stringify(settings));
 
-	$.getScript("https://rawgit.com/stiefanow89/CB/master/Blex-Bot.js", extend);
+	$.getScript("https://rawgit.comdawidstefanski375/CB/master/Blex-Bot.js", extend);
 }).call(this);
