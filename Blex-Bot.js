@@ -316,7 +316,7 @@
             rulesLink: "https://goo.gl/gmUfgq",
             themeLink: null,
             fbLink: "https://goo.gl/WUZGzz",
-            discordLink: " https://discord.gg/W4N8nbK",
+            discordLink: "https://discord.gg/XswrXbV",
             twitterLink: "https://goo.gl/L4uj8q",
             emotesLink: "https://goo.gl/tZZ4G6",
             youtubeLink: null,
@@ -1491,7 +1491,7 @@
             }, 1000 * 60 * 77);
             basicBot.room.autorouletteInterval = setInterval(function () {
                 basicBot.room.autorouletteFunc();
-            }, 1000 * 60 * 30);
+            }, 1000 * 60 * 20);
             basicBot.room.autofbInterval = setInterval(function () {
                 basicBot.room.autofbFunc();
             }, 1000 * 60 * 64);
