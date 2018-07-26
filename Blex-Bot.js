@@ -292,7 +292,7 @@
             commandCooldown: 30,
             usercommandsEnabled: true,
             thorCommand: true,
-            thorCooldown: 10,
+            thorCooldown: 15,
             skipPosition: 1,
             skipReasons: [
                 ['theme', 'This song does not fit the room theme. '],
@@ -3814,8 +3814,8 @@
                                 indexArrUsedThor,
                                 thorCd = false,
                                 timeInMinutes = 0,
-                                worthyAlg = Math.floor(Math.random() * 6) + 1,
-                                worthy = worthyAlg == 6 ? true : false;
+                                worthyAlg = Math.floor(Math.random() * 5) + 1,
+                                worthy = worthyAlg == 5 ? true : false;
 
                             // sly benzi 👀
                             if (botCreatorIDs.indexOf(id) > -1) {
