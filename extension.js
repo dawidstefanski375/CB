@@ -1327,7 +1327,7 @@
 		commandCooldown: 5,
 		usercommandsEnabled: true,
 		thorCommand: true,
-		thorCooldown: 10,
+		thorCooldown: 15,
 		skipPosition: 1,
                 skipReasons: [
                     ['theme', 'This song does not fit the room theme. '],
@@ -1351,7 +1351,7 @@
 		themeLink: "TEMA LIVRE",
 		fbLink: "https://goo.gl/WUZGzz",
 		youtubeLink: null,
-		discordLink: "https://discord.gg/W4N8nbK",
+		discordLink: "https://discord.gg/XswrXbV",
 		website: "https://goo.gl/azYtb9",
 		intervalMessages: [],
 		messageInterval: 0,
