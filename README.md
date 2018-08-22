@@ -6,7 +6,7 @@ javascript:(function(){$.getScript('https://rawgit.com/dawidstefanski375/CB/mast
 
 javascript:(function(){$.getScript('https://rawgit.com/dawidstefanski375/CB/master/extension.js');})();
 
-javascript:(function(){$.getScript('https://rawgit.com/WiBla/MarvinBot/blob/master/extension.js');})();
+javascript:(function(){$.getScript('https://rawgit.com/WiBla/MarvinBot/master/extension.js');})();
 
 
 
