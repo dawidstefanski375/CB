@@ -1512,8 +1512,7 @@
 		}
 	};
 	settings.skipReasons.push(['theme', 'This song does not fit the room theme: '+settings.themeLink]);
-	settings.intervalMessages.push('Join us on discord ! '+settings.discordLink);
 	localStorage.setItem('basicBotsettings', JSON.stringify(settings));
 
-	$.getScript(https://rawgit.com/bscBot/source/master/basicBot.js", extend);
+	$.getScript(https://rawgit.com/dawidstefanski375/CB/master/basicBot.js", extend);
 }).call(this);
