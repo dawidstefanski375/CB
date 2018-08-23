@@ -3719,7 +3719,7 @@
             },
 
             thorCommand: {
-                command: 'thor',
+                command: 'fura',
                 rank: 'user',
                 type: 'exact',
                 functionality: function(chat, cmd) {
