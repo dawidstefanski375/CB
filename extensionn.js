@@ -1502,7 +1502,7 @@
 		discordLink: "https://discord.gg/XswrXbV",
 		website: "https://goo.gl/azYtb9",
 		intervalMessages: 0,
-		messageInterval: 10,
+		messageInterval: [],
 		songstats: false,
 		commandLiteral: "!",
 		blacklists: {
