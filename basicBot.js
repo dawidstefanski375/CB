@@ -30,6 +30,7 @@
     var kill = function() {
         clearInterval(basicBot.room.autodisableInterval);
         clearInterval(basicBot.room.afkInterval);
+        clearInterval(basicBot.room.autorouletteInterval);
         basicBot.status = false;
     };
 
@@ -286,6 +287,7 @@
             strictTimeGuard: true,
             maximumSongLength: 10,
             autodisable: false,
+            autoroulette: true,
             commandCooldown: 30,
             usercommandsEnabled: true,
             thorCommand: false,
@@ -344,6 +346,12 @@
                     API.sendChat('!joindisable');
                 }
             },
+            autorouletteInterval: null,
+            autorouletteFunc: function () {
+                if (basicBot.status && basicBot.settings.autoroulette) {
+                    API.sendChat('!roulette');
+                }
+           },         
             queueing: 0,
             queueable: true,
             currentDJID: null,
@@ -1477,6 +1485,9 @@
             basicBot.room.autodisableInterval = setInterval(function() {
                 basicBot.room.autodisableFunc();
             }, 60 * 60 * 1000);
+            basicBot.room.autorouletteInterval = setInterval(function () {
+            basicBot.room.autorouletteFunc();
+            }, 1000 * 60 * 20);
             basicBot.loggedInID = API.getUser().id;
             basicBot.status = true;
             API.sendChat('/cap ' + basicBot.settings.startupCap);
@@ -1778,6 +1789,27 @@
                     }
                 }
             },
+         
+            autorouletteCommand: {
+                command: 'autoroulette',
+                rank: 'manager',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (basicBot.settings.autoroulette) {
+                            basicBot.settings.autoroulette = !basicBot.settings.autoroulette;
+                            return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.autoroulette}));
+                        }
+                        else {
+                            basicBot.settings.autoroulette = !basicBot.settings.autoroulette;
+                            return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.autoroulette}));
+                        }
+
+                    }
+                }
+            },             
 
             autoskipCommand: {
                 command: 'autoskip',
