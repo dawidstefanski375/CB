@@ -1439,8 +1439,8 @@
 		bot.loadChat();
 	}
 
-	var settings = {
-		botName: "Blex-Bot",
+		var settings = {
+		botName: "BlexBot",
 		language: "portuguese",
 		chatLink: "https://rawgit.com/dawidstefanski375/CB/master/pt-BR.json",
 		scriptLink: "https://rawgit.com/dawidstefanski375/CB/master/extensionn.js",
@@ -1453,7 +1453,7 @@
 		autoskip: true,
 		smartSkip: true,
 		cmdDeletion: true,
-		afkRemoval: false,
+		afkRemoval: true,
 		maximumAfk: 60,
 		afkpositionCheck: 50,
 		afkRankCheck: "admin",
@@ -1469,14 +1469,13 @@
 		voteSkipLimit: 4,
 		historySkip: true,
 		timeGuard: true,
-		strictTimeGuard: false,
 		maximumSongLength: 6.5,
 		autodisable: false,
 		commandCooldown: 5,
 		usercommandsEnabled: true,
 		thorCommand: true,
 		thorCooldown: 15,
-		skipPosition: 2,
+		skipPosition: 1,
                 skipReasons: [
                     ['theme', 'This song does not fit the room theme. '],
                     ['op', 'This song is on the OP list. '],
@@ -1490,7 +1489,7 @@
 		motdEnabled: false,
 		motdInterval: 5,
 		motd: "",
-		filterChat: false,
+		filterChat: true,
 		filterSongs: true,
 		etaRestriction: false,
 		welcome: true,
@@ -1501,8 +1500,8 @@
 		youtubeLink: null,
 		discordLink: "https://discord.gg/XswrXbV",
 		website: "https://goo.gl/azYtb9",
-		intervalMessages: 0,
-		messageInterval: [],
+		intervalMessages: [],
+		messageInterval: 0,
 		songstats: false,
 		commandLiteral: "!",
 		blacklists: {
@@ -1511,8 +1510,8 @@
 			BANNED: "https://rawgit.com/dawidstefanski375/CB/master/BANNEDlist.json"
 		}
 	};
-	settings.skipReasons.push(['theme', 'This song does not fit the room theme: '+settings.themeLink]);
+	settings.intervalMessages.push('Join us on discord ! '+settings.discordLink);
 	localStorage.setItem('basicBotsettings', JSON.stringify(settings));
 
-	$.getScript(https://rawgit.com/dawidstefanski375/CB/master/basicBot.js", extend);
+	$.getScript("https://rawgit.com/dawidstefanski375/CB/master/Blex-Bot.js", extend);
 }).call(this);
