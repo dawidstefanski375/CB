@@ -2009,6 +2009,48 @@
                     }
                 }
             },
+         
+             cantadasCommand: {
+                command: 'ct',
+                rank: 'user',
+                type: 'startsWith',
+                getCantadases: function(chat) {
+                    var k = Math.floor(Math.random() * basicBot.chat.cantadases.length);
+                    return basicBot.chat.cantadases[k];
+                },
+                functionality: function(chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
+                    else {
+                        var msg = chat.message;
+                        var space = msg.indexOf(' ');
+                        var name = msg.substring(space + 2);
+                        var user = basicBot.userUtilities.lookupUserName(name);
+                        return API.sendChat(subChat(basicBot.chat.cantadas, {nameto: user.username, namefrom: chat.un, cantadas: this.getCantadases()}));
+                       }
+                    }           
+                 },  
+         
+            chatosCommand: {
+                command: 'chatos',
+                rank: 'manager',
+                type: 'startsWith',
+                getChatos: function(chat) {
+                    var a = Math.floor(Math.random() * basicBot.chat.chatos.length);
+                    return basicBot.chat.chatos[a];
+                },
+                functionality: function(chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
+                    else {
+                        var msg = chat.message;
+                        var space = msg.indexOf(' ');
+                        var name = msg.substring(space + 2);
+                        var user = basicBot.userUtilities.lookupUserName(name);
+                        return API.sendChat(subChat(basicBot.chat.chato, {nameto: user.username, namefrom: chat.un, chato: this.getChatos()}));
+                            }
+                         }           
+                     },         
 
             clearchatCommand: {
                 command: 'clearchat',
@@ -2729,6 +2771,27 @@
                     }
                 }
             },
+         
+            kissCommand: {
+                command: 'kiss',
+                rank: 'user',
+                type: 'startsWith',
+                getKisses: function(chat) {
+                    var k = Math.floor(Math.random() * basicBot.chat.kisses.length);
+                    return basicBot.chat.kisses[k];
+                },
+                functionality: function(chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
+                    else {
+                        var msg = chat.message;
+                        var space = msg.indexOf(' ');
+                        var name = msg.substring(space + 2);
+                        var user = basicBot.userUtilities.lookupUserName(name);
+                        return API.sendChat(subChat(basicBot.chat.kiss, {nameto: user.username, namefrom: chat.un, kiss: this.getKisses()}));
+                       }
+                    }           
+                },               
 
             languageCommand: {
                 command: 'language',
