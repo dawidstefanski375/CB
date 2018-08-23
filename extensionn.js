@@ -1443,7 +1443,7 @@
 		botName: "Blex-Bot",
 		language: "portuguese",
 		chatLink: "https://rawgit.com/dawidstefanski375/CB/master/pt-BR.json",
-		scriptLink: "https://rawgit.com/dawidstefanski375/CB/master/extension2.js",
+		scriptLink: "https://rawgit.com/dawidstefanski375/CB/master/extensionn.js",
 		playLive: true,
 		roomLock: false,
 		startupCap: 1,
