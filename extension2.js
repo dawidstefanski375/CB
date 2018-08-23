@@ -1000,7 +1000,7 @@
 			}
 		};
 		bot.commands.props = {
-			command: 'fura',
+			command: 'props',
 			rank: 'user',
 			type: 'exact',
 			functionality: function (chat, cmd) {
@@ -1014,7 +1014,7 @@
 					var string = propsStrings[Math.floor(Math.random()*propsStrings.length)];
 
 					// Self proping are you ?
-					if (users.dj.substr(1) === users.user) return API.sendChat(`/me You shall not give yourself props ${users.dj}.`);
+					if (users.dj.substr(1) === users.user) return API.sendChat(`me Não seja cabeçudo(a)!Voce não pode elogiar sua própria música ${users.dj}.`);
 
 					for (var key in users) {
 						string = string.split('%%'+key.toUpperCase()+'%%').join(users[key]);
