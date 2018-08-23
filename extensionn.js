@@ -1454,7 +1454,7 @@
 		smartSkip: true,
 		cmdDeletion: true,
 		afkRemoval: true,
-		maximumAfk: 60,
+		maximumAfk: 120,
 		afkpositionCheck: 50,
 		afkRankCheck: "admin",
 		maximumDc: 120,
