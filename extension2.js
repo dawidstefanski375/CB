@@ -1515,5 +1515,5 @@
 	settings.intervalMessages.push('Join us on discord ! '+settings.discordLink);
 	localStorage.setItem('basicBotsettings', JSON.stringify(settings));
 
-	$.getScript("https://rawgit.com/dawidstefanski375/CB/master/basicBot.js", extend);
+	$.getScript("https://rawgit.com/dawidstefanski375/CB/master/Blex-Bot.js", extend);
 }).call(this);
