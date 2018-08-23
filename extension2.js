@@ -1443,7 +1443,7 @@
 		botName: "Blex-Bot",
 		language: "portuguese",
 		chatLink: "https://rawgit.com/dawidstefanski375/CB/master/pt-BR.json",
-		scriptLink: "https://rawgit.com/dawidstefanski375/CB/master/Blex-Bot.js",
+		scriptLink: "https://rawgit.com/dawidstefanski375/CB/master/basicBot.js",
 		playLive: true,
 		roomLock: false,
 		startupCap: 1,
@@ -1515,5 +1515,5 @@
 	settings.intervalMessages.push('Join us on discord ! '+settings.discordLink);
 	localStorage.setItem('basicBotsettings', JSON.stringify(settings));
 
-	$.getScript("https://rawgit.com/dawidstefanski375/CB/master/Blex-Bot.js", extend);
+	$.getScript(https://rawgit.com/dawidstefanski375/CB/master/basicBot.js", extend);
 }).call(this);
