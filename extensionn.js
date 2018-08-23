@@ -752,7 +752,7 @@
 							url: 'https://translate.googleapis.com/translate_a/single?client=gtx&dt=t'+
 							'&sl=en'+
 							'&tl='+lang+
-							"&q="+ encodeURI('Please, speak either French or English.'),
+							"&q="+ encodeURI('Please, speak either Portuguese or English.'),
 							success: function(data) {
 								ch += data[0][0][0];
 								API.sendChat(ch);
