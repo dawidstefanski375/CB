@@ -13,14 +13,31 @@
 		"%%DJ%% That's a banger! -%%USER%%",
 		"%%DJ%% thanks to you %%USER%% is an absolute fan of this music!"
 	];
-	const propsStrings = [
-		"%%DJ%% Aye mate, %%USER%% wants to set sails with you 👍",
-		"[%%USER%%] %%DJ%% Damn, you're on 🔥!",
-		"%%DJ%%, %%USER%% wants you to know that you're a great DJ!",
-		"%%DJ%%, %%USER%% has bought you some 💐 for your awesome play!",
-		"Hey %%DJ%%, I think %%USER%% really likes you 😘",
-		"Hey %%DJ%%, you really set the dancefloor on fire!"
-	];
+	 const propsStrings = [
+               "%%USER%% disse, Ótima musica :ok_hand: para %%DJ%%.",
+               "%%USER%% disse, Que hino para %%DJ%%.",
+               "%%USER%% disse, Que hinão da Poha. :heart: para %%DJ%%.",
+               "%%USER%% disse, :ballot_box_with_check: Q U A L I D A D E :white_check_mark:. para %%DJ%%.",
+               "%%USER%% disse, Música impressionante :ok_hand: para %%DJ%%.",
+               "%%USER%% disse, Puta música boa :ok_hand: para %%DJ%%.",
+               "%%USER%% disse, Um hino desses, bicho para %%DJ%%.",
+               "%%USER%% disse, Socorro com o hino para %%DJ%%.",
+               "%%USER%% disse, Você podia tocar essa música para mim para %%DJ%%.",
+               "%%USER%% disse, Close certo para %%DJ%%.",
+               "%%USER%% disse, Já quero o #1 na Hot 100 para %%DJ%%.",
+               "%%USER%% disse, Você quer dançar comigo? para %%DJ%%.",
+               "%%USER%% disse, Não há melhor opção :thumbsup: para %%DJ%%.",
+               "%%USER%% disse, Porra bicho, que hino para %%DJ%%.",
+               "%%USER%% disse, Adoro!!! :heart: para %%DJ%%.",
+               "%%USER%% disse, muito bom! para %%DJ%%.",
+               "%%USER%% disse, Adoro essa musica :heart: para %%DJ%%.",
+               "%%USER%% disse,Essa musica sempre fica na minha memória :heart: para %%DJ%%.",
+               "%%USER%% disse, :point_left: Essa  é foda! para %%DJ%%.",
+               "%%USER%% disse, Maluco Brabo! para %%DJ%%.",
+               "%%USER%% disse, Música linda mesmo! para %%DJ%%.",
+               "%%USER%% disse, É 10/10 para %%DJ%%.",
+               "%%USER%% disse, :sparkles: B :sparkles: E :sparkles: R :sparkles: R :sparkles: O :sparkles: para %%DJ%%."
+    ];
 	/*const modules = {
 		roomInfo: _.find(require.s.contexts._.defined,m=>m&&m.attributes&&m.attributes.shouldCycle)
 	};*/
@@ -712,7 +729,7 @@
 			}
 		};
 		bot.commands.englishCommand = {
-			command: ['english', 'en'],
+			command: ['portuguese', 'pt'],
 			rank: 'residentdj',
 			type: 'startsWith',
 			functionality: function (chat, cmd) {
@@ -772,7 +789,7 @@
 		};
 		bot.commands.helpCommand = {
 			command: 'help',
-			rank: 'user',
+			rank: 'host',
 			type: 'exact',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -783,7 +800,7 @@
 			}
 		};
 		bot.commands.mehCommand = {
-			command: 'meh',
+			command: 'host',
 			rank: 'bouncer',
 			type: 'exact',
 			functionality: function (chat, cmd) {
@@ -797,7 +814,7 @@
 		};
 		bot.commands.event = {
 			command: ['event', 'roomevent'],
-			rank: 'manager',
+			rank: 'host',
 			type: 'exact',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -861,7 +878,7 @@
 		};
 		bot.commands.bot = {
 			command: 'bot',
-			rank: 'bouncer',
+			rank: 'host',
 			type: 'startsWith',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -892,7 +909,7 @@
 		};
 		bot.commands.blocop = {
 			command: 'blocop',
-			rank: 'user',
+			rank: 'host',
 			type: 'startsWith',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -914,7 +931,7 @@
 		};
 		bot.commands.loto = {
 			command: 'loto',
-			rank: 'user',
+			rank: 'host',
 			type: 'exact',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -960,7 +977,7 @@
 		};
 		bot.commands.tune = {
 			command: 'tune',
-			rank: 'user',
+			rank: 'host',
 			type: 'exact',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -983,7 +1000,7 @@
 			}
 		};
 		bot.commands.props = {
-			command: 'props',
+			command: 'fura',
 			rank: 'user',
 			type: 'exact',
 			functionality: function (chat, cmd) {
@@ -1026,13 +1043,13 @@
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
 				if (!bot.commands.executable(this.rank, chat)) return void (0);
 				else {
-					API.sendChat('https://i.imgur.com/ji5Uzkg.gif Remember to put the room in your favorite if we deserve it ! ♥');
+					API.sendChat('Lembre-se de clicar na estrela na barra superior para favoritar essa sala! https://i.imgur.com/zI5qtAi.png');
 				}
 			}
 		};
 		bot.commands.helpRanks = {
 			command: ['helpranks', 'rank'],
-			rank: 'user',
+			rank: 'host',
 			type: 'exact',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1044,7 +1061,7 @@
 		};
 		bot.commands.diy = {
 			command: 'diy',
-			rank: 'user',
+			rank: 'host',
 			type: 'exact',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1074,13 +1091,13 @@
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
 				if (!bot.commands.executable(this.rank, chat)) return void (0);
 				else {
-					API.sendChat('Connect with us on our Discord: ' + bot.settings.discordLink);
+					API.sendChat('Fique por dentro de tudo que acontece na comunidade! Participe do Discord: ' + bot.settings.discordLink);
 				}
 			}
 		};
 		bot.commands.pendu = {
 			command: ['pendu', 'hangman'],
-			rank: 'user',
+			rank: 'host',
 			type: 'exact',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
@@ -1092,7 +1109,7 @@
 		};
 		bot.commands.stopPendu = {
 			command: ['stoppendu', 'stophangman'],
-			rank: 'bouncer',
+			rank: 'host',
 			type: 'exact',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
@@ -1216,11 +1233,11 @@
 			setTimeout(function() {
 				let limit = bot.settings.maximumSongLength*60;
 				if (bot.settings.timeGuard && !bot.settings.strictTimeGuard && newMedia.duration > limit && !bot.room.roomevent) {
-					API.sendChat(`Song is longer than ${Math.floor(limit/60)}min ${limit%60}s, skipping after the limit.`);
+					API.sendChat(`Essa música ultrapassa o limite de ${Math.floor(limit/60)}min ${limit%60}s e será pulada quando alcançar o  limite.`);
 					setTimeout(function(data) {
 						// Is it still the same music or has it been skipped already ?
 						if (data.cid === API.getMedia().cid) {
-							API.sendChat('Skipping after the time limit..');
+							API.sendChat('A música alcançou o limite permitido, esta sendo pulada..');
 							API.moderateForceSkip();
 						}
 					}, limit*1000, newMedia);
@@ -1423,10 +1440,10 @@
 	}
 
 	var settings = {
-		botName: "MarvinBot",
-		language: "english",
-		chatLink: "https://rawgit.com/WiBla/custom/master/lang/en.json",
-		scriptLink: "https://rawgit.com/WiBla/MarvinBot/master/extension.js",
+		botName: "Blex-Bot",
+		language: "portuguese",
+		chatLink: "https://rawgit.com/dawidstefanski375/CB/master/pt-BR.json",
+		scriptLink: "https://rawgit.com/dawidstefanski375/CB/master/extension2.js",
 		playLive: true,
 		roomLock: false,
 		startupCap: 1,
@@ -1449,25 +1466,27 @@
 		cycleGuard: false,
 		maximumCycletime: 30,
 		voteSkip: true,
-		voteSkipLimit: 5,
+		voteSkipLimit: 4,
 		historySkip: true,
 		timeGuard: true,
 		strictTimeGuard: false,
-		maximumSongLength: 7.5,
+		maximumSongLength: 6.5,
 		autodisable: false,
 		commandCooldown: 5,
 		usercommandsEnabled: true,
-		thorCommand: false,
+		thorCommand: true,
 		thorCooldown: 15,
 		skipPosition: 2,
-		skipReasons: [
-			["history",  "This song is in the DJ history."],
-			["sound",    "The song you played had bad sound quality or no sound."],
-			["indispo",  "The song you played was not available for some users. "],
-			["troll",    "We do not allow this type of music/video."],
-			["nsfw",     "The song you played contained not safe for work content."],
-			["outro",    "The song you played had a long/irrelevant outro."]
-		],
+                skipReasons: [
+                    ['theme', 'This song does not fit the room theme. '],
+                    ['op', 'This song is on the OP list. '],
+                    ['history', 'This song is in the history. '],
+                    ['mix', 'You played a mix, which is against the rules. '],
+                    ['sound', 'The song you played had bad sound quality or no sound. '],
+                    ['nsfw', 'The song you contained was NSFW (image or sound). '],
+                    ['unavailable', 'The song you played was not available for some users. '],
+                    ['alerta', 'Alerta! Video/musica possui conteúdo inapropriado. Não é permitido! ']
+            ],
 		motdEnabled: false,
 		motdInterval: 5,
 		motd: "",
@@ -1475,35 +1494,26 @@
 		filterSongs: true,
 		etaRestriction: false,
 		welcome: true,
-		opLink: "http://wibla.free.fr/plug/room#op",
-		rulesLink: "http://wibla.free.fr/plug/rules",
-		themeLink: "https://i.imgur.com/2riDvuR.png",
-		fbLink: "https://facebook.com/ElectroHousenjoythedrop",
+		opLink: null,
+		rulesLink: "https://goo.gl/gmUfgq",
+		themeLink: "TEMA LIVRE",
+		fbLink: "https://goo.gl/WUZGzz",
 		youtubeLink: null,
-		discordLink: "https://discord.gg/fVFjmXM",
-		website: "http://wibla.free.fr/plug",
-		intervalMessages: [
-			"Give the !loto a try, you can win up to 75k PP daily!! :gift:",
-			"Our favorite autowoot https://gg.gg/pi-extension",
-			"https://i.imgur.com/ji5Uzkg.gif Remember to put the room in your favorite if we deserve it! ♥",
-			":warning: If your songs has more than 5 mehs, it will be skipped!",
-			"Invite your friends! The more people, the more fun!",
-			"You can play music up to 7min 30sec. After that, it will be skipped!",
-			"Feel free to use !tune or !props whenever you hear a banging tune!",
-			"Avoid playing the same thing all the time and shuffle your playlist :)"
-		],
+		discordLink: "https://discord.gg/XswrXbV",
+		website: "https://goo.gl/azYtb9",
+		intervalMessages: 0,
 		messageInterval: 10,
 		songstats: false,
 		commandLiteral: "!",
 		blacklists: {
 			NSFW: null,
-			OP: "https://rawgit.com/WiBla/custom/master/blacklists/OPlist.json",
-			BANNED: "https://rawgit.com/WiBla/custom/master/blacklists/BANNEDlist.json"
+			OP: "https://rawgit.com/dawidstefanski375/CB/master/OPlist.json",
+			BANNED: "https://rawgit.com/dawidstefanski375/CB/master/BANNEDlist.json"
 		}
 	};
 	settings.skipReasons.push(['theme', 'This song does not fit the room theme: '+settings.themeLink]);
 	settings.intervalMessages.push('Join us on discord ! '+settings.discordLink);
 	localStorage.setItem('basicBotsettings', JSON.stringify(settings));
 
-	$.getScript("https://rawgit.com/bscBot/source/master/basicBot.js", extend);
+	$.getScript("https://rawgit.com/dawidstefanski375/CB/master/basicBot.js", extend);
 }).call(this);
