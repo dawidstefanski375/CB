@@ -248,7 +248,7 @@
     var basicBot = {
         version: '2.12.1',
         status: false,
-        name: 'basicBot',
+        name: 'BlexBot',
         loggedInID: null,
         scriptLink: 'https://rawgit.com/dawidstefanski375/CB/master/basicBot.js',
         cmdLink: 'http://git.io/245Ppg',
@@ -258,8 +258,8 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: 'basicBot',
-            language: 'english',
+            botName: 'BlexBot',
+            language: 'portuguese',
             chatLink: 'https://rawgit.com/dawidstefanski375/CB/master/pt-BR.json',
             scriptLink: 'https://rawgit.com/dawidstefanski375/CB/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
@@ -300,7 +300,8 @@
                 ['mix', 'You played a mix, which is against the rules. '],
                 ['sound', 'The song you played had bad sound quality or no sound. '],
                 ['nsfw', 'The song you contained was NSFW (image or sound). '],
-                ['unavailable', 'The song you played was not available for some users. ']
+                ['unavailable', 'The song you played was not available for some users. '],
+                ['alerta', 'Alerta! Video/musica possui conteúdo inapropriado. Não é permitido! ']
             ],
             afkpositionCheck: 15,
             afkRankCheck: 'ambassador',
@@ -311,21 +312,22 @@
             etaRestriction: false,
             welcome: true,
             opLink: null,
-            rulesLink: null,
+            rulesLink: "https://goo.gl/gmUfgq",
             themeLink: null,
             fbLink: null,
             youtubeLink: null,
-            website: null,
+            emotesLink: "https://goo.gl/tZZ4G6",         
+            website: "https://goo.gl/GwPe67",
             intervalMessages: [],
             messageInterval: 5,
             songstats: true,
             commandLiteral: '!',
             blacklists: {
-                NSFW: 'https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json',
-                OP: 'https://rawgit.com/basicBot/custom/master/blacklists/OPlist.json',
-                BANNED: 'https://rawgit.com/basicBot/custom/master/blacklists/BANNEDlist.json'
+                NSFW: 'https://rawgit.com/dawidstefanski375/CB/master/blacklists/NSFWlist.json',
+                OP: 'https://rawgit.com/dawidstefanski375/CB/master/OPlist.json',
+                BANNED: 'https://rawgit.com/dawidstefanski375/CB/master/BANNEDlist.json'
             }
-        },
+},
         room: {
             name: null,
             chatMessages: [],
@@ -2143,7 +2145,7 @@
             },
 
             commandsCommand: {
-                command: 'commands',
+                command: 'comandos',
                 rank: 'user',
                 type: 'exact',
                 functionality: function(chat, cmd) {
@@ -3298,6 +3300,20 @@
                     }
                 }
             },
+         
+            rcsCommand: {
+                command: 'rcs',
+                rank: 'user',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (typeof basicBot.settings.rulesLink === "string")
+                            return API.sendChat(subChat(basicBot.chat.rcsinfo));
+                    }
+                }
+            },          
 
             refreshCommand: {
                 command: 'refresh',
@@ -3414,7 +3430,7 @@
             },
 
             rulesCommand: {
-                command: 'rules',
+                command: 'regras',
                 rank: 'user',
                 type: 'exact',
                 functionality: function(chat, cmd) {
