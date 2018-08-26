@@ -173,10 +173,7 @@
 		loto: JSON.parse(localStorage.getItem('loto-CD')) || []
 	};
 	const lotoBlacklist = [
-		4613422,  // WiBla
-		6553384,  // <~ Tene ~>
-		31256054, // miguou888
-		30051880, // Fana
+		16681992,  // Smok Wawelski
 	];
 	const emote = [
 		// [Emote, value, %chance]
@@ -878,17 +875,17 @@
 		};
 		bot.commands.bot = {
 			command: 'bot',
-			rank: 'host',
+			rank: 'user',
 			type: 'startsWith',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
 				if (!bot.commands.executable(this.rank, chat)) return void (0);
 				else {
 					var msg = chat.message;
-					if (msg.length === cmd.length) return API.sendChat("I am indeed a bot.");
+					if (msg.length === cmd.length) return API.sendChat("Eu sou realmente um bot :robot_face: ");
 					var name = msg.substr(cmd.length + 1);
 					if (msg.length > cmd.length + 1) {
-						API.sendChat("/me " + name + ", I am a bot, you can try to talk to me but I won't answer unless you use commands.");
+						API.sendChat("/me " + name + ", Eu sou um bot, você pode tentar falar comigo, mas eu não vou responder a menos que você use comandos :robot_face: ");
 					}
 				}
 			}
@@ -1291,21 +1288,21 @@
 							}));
 							skip();
 						} else if (warns === 1) {
-							API.sendChat(`/me @${dj.username}, this song is in the DJ history.`);
+							API.sendChat(`/me @${dj.username}, essa m\u00fasica est\u00e1 no hist\u00f3rico.`);
 							skip();
 						} else if (warns === 2) {
-							API.sendChat(`/me @${dj.username}, this song is in the DJ history (x2). Please check your playlists or you will be removed.`);
+							API.sendChat(`/me @${dj.username}, Essa música está no histórico (2º aviso). Por favor verifique sua playlist ou será removido da lista de espera.`);
 							skip();
 						} else if (warns === 3) {
 							API.moderateForceQuit();
-							API.sendChat(`/me @${dj.username} you have been removed from the waitlist for having too many songs in history. If this happens once more, you will be waitlist banned for 15 minutes.`);
+		                                        API.sendChat(`/me @${dj.username} Você foi removido da lista de espera por ter muitas músicas no histórico (3º aviso). Se isso acontecer mais uma vez, você será banido por 15 minutos.`);
 						} else if (warns >= 4) {
 							waitlistBan({
 								ID: dj.id,
 								duration: 's',
 								reason: 4
 							});
-							API.sendChat(`/me @${dj.username} you have been waitlist banned for 15 minutes, please disable any auto-join and check your playlists regularly to prevent this from happening again.`);
+							API.sendChat(`/me @${dj.username} Você foi banido por 15 minutos, por favor desabilite auto-join e verifique suas playlists regularmente para evitar que isso aconteça novamente.`);
 						}
 					} else {
 						bot.room.historyList.push([obj.media.cid, +new Date()]);
@@ -1340,7 +1337,7 @@
 				!API.hasPermission(msg.uid, API.ROLE.BOUNCER)
 			) {
 				API.moderateDeleteChat(msg.cid);
-				API.sendChat(`/me [@${msg.un}] You are not allowed to post other room links.`);
+				API.sendChat(`/me [@${msg.un}] Voce não tem permissão para postar links de outras salas`);
 			}
 			if (msg.type === 'log' || msg.type === 'emote') return;
 			if (msg.uid === API.getUser().id) hangMessaged.push(msg.cid);
@@ -1406,7 +1403,7 @@
 			if (score.negative < bot.settings.voteSkipLimit) return;
 
 			if (bot.settings.voteSkip) {
-				API.sendChat("/me Too many mehs, skipping..");
+				API.sendChat("/me Sua música não esta agradando, atingiu o numero de chatos (mehs) necessário para ser pulada!");
 				API.moderateForceSkip();
 			}
 		});
