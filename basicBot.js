@@ -292,7 +292,7 @@
             usercommandsEnabled: true,
             thorCommand: false,
             thorCooldown: 10,
-            skipPosition: 3,
+            skipPosition: 1,
             skipReasons: [
                 ['theme', 'This song does not fit the room theme. '],
                 ['op', 'This song is on the OP list. '],
@@ -3837,7 +3837,7 @@
 
                             if (worthy) {
                                 if (API.getWaitListPosition(id) != 0)
-                                    basicBot.userUtilities.moveUser(id, 1, false);
+                                    basicBot.userUtilities.moveUser(id, 2, false);
                                 API.sendChat(subChat(basicBot.chat.thorWorthy, {
                                     name: from
                                 }));
