@@ -1196,7 +1196,9 @@
 						title: lastplay.media.title,
 						woots: lastplay.score.positive,
 						grabs: lastplay.score.grabs,
-						mehs: lastplay.score.negative
+						mehs: lastplay.score.negative,
+						length: API.getUsers().length,
+						name: lastplay.dj.username
 					}));
 				}
 			}
@@ -1204,6 +1206,7 @@
 			bot.room.roomstats.totalMehs += lastplay.score.negative;
 			bot.room.roomstats.totalCurates += lastplay.score.grabs;
 			bot.room.roomstats.songCount++;
+			bot.room.roomstats.totalLength += API.getUsers().length;
 			bot.roomUtilities.intervalMessage();
 			bot.room.currentDJID = obj.dj.id;
 
