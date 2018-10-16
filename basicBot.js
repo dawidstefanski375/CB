@@ -251,7 +251,7 @@
         name: 'BlexBot',
         loggedInID: null,
         scriptLink: 'https://rawgit.com/dawidstefanski375/CB/master/basicBot.js',
-        cmdLink: 'http://git.io/245Ppg',
+        cmdLink: 'https://braziloungexclusive.wixsite.com/plug/comandos',
         chatLink: 'https://rawgit.com/dawidstefanski375/CB/master/pt-BR.json',
         chat: null,
         loadChat: loadChat,
