@@ -1006,21 +1006,17 @@
             var lastplay = obj.lastPlay;
             if (typeof lastplay === 'undefined') return;
             if (basicBot.settings.songstats) {
-                if (typeof basicBot.chat.songstatistics === 'undefined') {
-                    API.sendChat('/me ' + lastplay.media.author + ' - ' + lastplay.media.title + ': ' + lastplay.score.positive + 'W/' + lastplay.score.grabs + 'G/' + lastplay.score.negative + 'M.')
-                } else {
-                    API.sendChat(subChat(basicBot.chat.songstatistics, {
-                        artist: lastplay.media.author,
-                        title: lastplay.media.title,
-                        woots: lastplay.score.positive,
-                        grabs: lastplay.score.grabs,
-                        mehs: lastplay.score.negative
-                    }))
+                if (typeof basicBot.chat.songstatistics === "undefined") {
+                    API.sendChat("/me " + API.getUsers().length + lastplay.dj.username + lastplay.media.author + " - " + lastplay.media.title + ": " + lastplay.score.positive + "W/" + lastplay.score.grabs + "G/" + lastplay.score.negative + "M.")
+                }
+                else {
+                    API.sendChat(subChat(basicBot.chat.songstatistics, {name: lastplay.dj.username, artist: lastplay.media.author, title: lastplay.media.title, length: API.getUsers().length, woots: lastplay.score.positive, grabs: lastplay.score.grabs, mehs: lastplay.score.negative}))
                 }
             }
             basicBot.room.roomstats.totalWoots += lastplay.score.positive;
             basicBot.room.roomstats.totalMehs += lastplay.score.negative;
             basicBot.room.roomstats.totalCurates += lastplay.score.grabs;
+            basicBot.room.roomstats.totalLength += API.getUsers().length;
             basicBot.room.roomstats.songCount++;
             basicBot.roomUtilities.intervalMessage();
             basicBot.room.currentDJID = obj.dj.id;
