@@ -251,7 +251,7 @@
         status: false,
         name: 'BlexBot',
         loggedInID: null,
-        scriptLink: 'https://rawgit.com/DavidStefansky/Blex-Bot/master/Blex-Bot.jss',
+        scriptLink: 'https://rawgit.com/DavidStefansky/Blex-Bot/master/Blex-Bot.js',
         cmdLink: 'https://goo.gl/7GCWJe',
         chatLink: 'https://rawgit.com/DavidStefansky/Blex-Bot/master/pt-BR.json',
         chat: null,
