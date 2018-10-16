@@ -385,7 +385,7 @@
 					deleteMedia(media, callback);
 					errorState = 1;
 				} else {
-					API.sendChat('/me [Error @WiBla] Could not delete current live.');
+					API.sendChat('/me [Error @Weresz] Could not delete current live.');
 				}
 			}
 		});
@@ -425,7 +425,7 @@
 					getNewLive(callback);
 					errorState = 1;
 				} else {
-					API.sendChat('/me [Error @WiBla] Could not get new live.');
+					API.sendChat('/me [Error @Weresz] Could not get new live.');
 				}
 			}
 		});
@@ -450,7 +450,7 @@
 					addMedia(media, callback);
 					errorState = 1;
 				} else {
-					API.sendChat('/me [Error @WiBla] Could not add live.');
+					API.sendChat('/me [Error @Weresz] Could not add live.');
 				}
 			}
 		});
@@ -1158,7 +1158,7 @@
 
 			if (bot.settings.filterSongs) {
 				let blacklistRE = /(nightcore|ear rape|gemidão do zap)/gi;
-				var blacklistArray = ['nightcore', 'ear rape', 'gemidão do zap'];
+				var blacklistArray = ['Justin Bieber'];
 				let wholeTitle = `${obj.media.author} - ${obj.media.title}`.toLowerCase();
 
 				wholeTitle.split(blacklistRE).forEach((word) => {
@@ -1166,7 +1166,7 @@
 					if (indexOfBlacklist > -1) {
 						switch(indexOfBlacklist) {
 							case 0:
-								API.sendChat(`/me [@${obj.dj.username}] nightcore isn't allowed in this room (check !theme).`);
+								API.sendChat(`/me [@${obj.dj.username}] Justin Bieber isn't allowed in this room .`);
 								bot.roomUtilities.smartSkip();
 							break;
 
