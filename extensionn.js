@@ -1500,7 +1500,7 @@
 		website: "https://goo.gl/azYtb9",
 		intervalMessages: [],
 		messageInterval: 0,
-		songstats: true,
+		songstats: false,
 		commandLiteral: "!",
 		blacklists: {
 			NSFW: null,
