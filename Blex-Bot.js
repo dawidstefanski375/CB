@@ -113,7 +113,7 @@
 
     var loadChat = function(cb) {
         if (!cb) cb = function() {};
-        $.get('https://rawgit.com/dawidstefanski375/CB/master/langIndex.json', function(json) {
+        $.get('https://rawgit.com/DavidStefansky/Blex-Bot/master/langIndex.json', function(json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -251,9 +251,9 @@
         status: false,
         name: 'BlexBot',
         loggedInID: null,
-        scriptLink: 'https://rawgit.com/dawidstefanski375/CB/master/Blex-Bot.js',
+        scriptLink: 'https://rawgit.com/DavidStefansky/Blex-Bot/master/Blex-Bot.jss',
         cmdLink: 'https://goo.gl/7GCWJe',
-        chatLink: 'https://rawgit.com/dawidstefanski375/CB/master/pt-BR.json',
+        chatLink: 'https://rawgit.com/DavidStefansky/Blex-Bot/master/pt-BR.json',
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -261,8 +261,8 @@
         settings: {
             botName: 'BlexBot',
             language: 'portuguese',
-            chatLink: 'https://rawgit.com/dawidstefanski375/CB/master/pt-BR.json',
-            scriptLink: 'https://rawgit.com/dawidstefanski375/CB/master/Blex-Bot.js',
+            chatLink: 'https://rawgit.com/DavidStefansky/Blex-Bot/master/pt-BR.json',
+            scriptLink: 'https://rawgit.com/DavidStefansky/Blex-Bot/master/Blex-Bot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -271,7 +271,7 @@
             autoskip: true,
             smartSkip: true,
             cmdDeletion: true,
-            maximumAfk: 120,
+            maximumAfk: 60,
             afkRemoval: true,
             maximumDc: 300,
             bouncerPlus: false,
@@ -281,18 +281,18 @@
             maximumLocktime: 10,
             cycleGuard: true,
             maximumCycletime: 10,
-            voteSkip: false,
+            voteSkip: true,
             voteSkipLimit: 2,
             historySkip: true,
             timeGuard: true,
             strictTimeGuard: false,
             maximumSongLength: 6,
             autodisable: false,
-            autoroulette: true,
+            autoroulette: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
             thorCommand: true,
-            thorCooldown: 15,
+            thorCooldown: 10,
             skipPosition: 1,
             skipReasons: [
                 ['theme', 'This song does not fit the room theme. '],
@@ -313,10 +313,10 @@
             etaRestriction: false,
             welcome: true,
             opLink: null,
-            rulesLink: "https://goo.gl/gmUfgq",
+            rulesLink: "https://goo.gl/P7N1CV",
             themeLink: null,
             fbLink: "https://goo.gl/WUZGzz",
-            discordLink: "https://discord.gg/XswrXbV",
+            discordLink: " https://discord.gg/W4N8nbK",
             twitterLink: "https://goo.gl/L4uj8q",
             emotesLink: "https://goo.gl/tZZ4G6",
             youtubeLink: null,
@@ -326,9 +326,9 @@
             songstats: false,
             commandLiteral: '!',
             blacklists: {
-                NSFW: 'https://rawgit.com/dawidstefanski375/CB/master/blacklists/NSFWlist.json',
-                OP: 'https://rawgit.com/dawidstefanski375/CB/master/OPlist.json',
-                BANNED: 'https://rawgit.com/dawidstefanski375/CB/master/BANNEDlist.json'
+                NSFW: 'https://rawgit.com/stiefanow89/CB/master/blacklists/NSFWlist.json',
+                OP: 'https://rawgit.com/stiefanow89/CB/master/OPlist.json',
+                BANNED: 'https://rawgit.com/stiefanow89/CB/master/BANNEDlist.json'
             }
 },
         room: {
@@ -992,7 +992,7 @@
         eventDjadvance: function(obj) {
             if (!obj.dj) return;
             if (basicBot.settings.autowoot) {
-                $('.fa-thumbs-up').click(); // autowoot
+                $('#woot').click(); // autowoot
             }
 
             var user = basicBot.userUtilities.lookupUser(obj.dj.id)
@@ -1491,7 +1491,7 @@
             }, 1000 * 60 * 77);
             basicBot.room.autorouletteInterval = setInterval(function () {
                 basicBot.room.autorouletteFunc();
-            }, 1000 * 60 * 20);
+            }, 1000 * 60 * 30);
             basicBot.room.autofbInterval = setInterval(function () {
                 basicBot.room.autofbFunc();
             }, 1000 * 60 * 64);
@@ -1503,7 +1503,7 @@
             API.sendChat('/cap ' + basicBot.settings.startupCap);
             API.setVolume(basicBot.settings.startupVolume);
             if (basicBot.settings.autowoot) {
-                $('.fa-thumbs-up').click();
+                $('#woot').click();
             }
             if (basicBot.settings.startupEmoji) {
                 var emojibuttonoff = $('.icon-emoji-off');
@@ -3445,7 +3445,7 @@
                           
             rouletteCommand: {
                 command: 'roulette',
-                rank: 'manager',
+                rank: 'mod',
                 type: 'exact',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
@@ -3814,8 +3814,8 @@
                                 indexArrUsedThor,
                                 thorCd = false,
                                 timeInMinutes = 0,
-                                worthyAlg = Math.floor(Math.random() * 5) + 1,
-                                worthy = worthyAlg == 5 ? true : false;
+                                worthyAlg = Math.floor(Math.random() * 6) + 1,
+                                worthy = worthyAlg == 6 ? true : false;
 
                             // sly benzi 👀
                             if (botCreatorIDs.indexOf(id) > -1) {
