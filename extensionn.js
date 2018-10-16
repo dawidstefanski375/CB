@@ -1471,7 +1471,7 @@
 		timeGuard: true,
 		strictTimeGuard: false,	
 		maximumSongLength: 6.5,
-		autodisable: false,
+		autodisable: true,
 		commandCooldown: 5,
 		usercommandsEnabled: true,
 		thorCommand: true,
