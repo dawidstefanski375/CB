@@ -1491,7 +1491,7 @@
             }, 1000 * 60 * 77);
             basicBot.room.autorouletteInterval = setInterval(function () {
                 basicBot.room.autorouletteFunc();
-            }, 1000 * 60 * 30);
+            }, 30 * 60 * 1000);
             basicBot.room.autofbInterval = setInterval(function () {
                 basicBot.room.autofbFunc();
             }, 1000 * 60 * 64);
