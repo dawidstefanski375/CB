@@ -20,7 +20,7 @@
                "%%USER%% disse: :ok_hand:  Q U A L I D A D E :ok_hand: para %%DJ%%.",
                "%%USER%% disse: Música impressionante! :smiley: para %%DJ%%.",
                "%%USER%% disse: Um hino desses, bicho. para %%DJ%%.",
-               "%%USER%% disse: Você poderia tocar essa música para mim, %%DJ%%."
+               "%%USER%% disse: Você poderia tocar essa música para mim, %%DJ%%.",
                "%%USER%% disse: Close certo! para %%DJ%%.",
                "%%USER%% disse: Já quero o #1 na Hot 100. para %%DJ%%.",
                "%%USER%% disse: Não há melhor opção. :clap:  para %%DJ%%.",
