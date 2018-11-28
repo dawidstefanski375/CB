@@ -14,29 +14,26 @@
 		"%%DJ%% thanks to you %%USER%% is an absolute fan of this music!"
 	];
 	 const propsStrings = [
-               "%%USER%% disse, Ótima musica :ok_hand: para %%DJ%%.",
-               "%%USER%% disse, Que hino para %%DJ%%.",
-               "%%USER%% disse, Que hinão da Poha. :heart: para %%DJ%%.",
-               "%%USER%% disse, :ballot_box_with_check: Q U A L I D A D E :white_check_mark:. para %%DJ%%.",
-               "%%USER%% disse, Música impressionante :ok_hand: para %%DJ%%.",
-               "%%USER%% disse, Puta música boa :ok_hand: para %%DJ%%.",
-               "%%USER%% disse, Um hino desses, bicho para %%DJ%%.",
-               "%%USER%% disse, Socorro com o hino para %%DJ%%.",
-               "%%USER%% disse, Você podia tocar essa música para mim para %%DJ%%.",
-               "%%USER%% disse, Close certo para %%DJ%%.",
-               "%%USER%% disse, Já quero o #1 na Hot 100 para %%DJ%%.",
-               "%%USER%% disse, Você quer dançar comigo? para %%DJ%%.",
-               "%%USER%% disse, Não há melhor opção :thumbsup: para %%DJ%%.",
-               "%%USER%% disse, Porra bicho, que hino para %%DJ%%.",
-               "%%USER%% disse, Adoro!!! :heart: para %%DJ%%.",
-               "%%USER%% disse, muito bom! para %%DJ%%.",
-               "%%USER%% disse, Adoro essa musica :heart: para %%DJ%%.",
-               "%%USER%% disse,Essa musica sempre fica na minha memória :heart: para %%DJ%%.",
-               "%%USER%% disse, :point_left: Essa  é foda! para %%DJ%%.",
-               "%%USER%% disse, Maluco Brabo! para %%DJ%%.",
-               "%%USER%% disse, Música linda mesmo! para %%DJ%%.",
-               "%%USER%% disse, É 10/10 para %%DJ%%.",
-               "%%USER%% disse, :sparkles: B :sparkles: E :sparkles: R :sparkles: R :sparkles: O :sparkles: para %%DJ%%."
+               "%%USER%% disse: Você quer dançar comigo? para %%DJ%%.",
+               "%%USER%% disse: Ótima música! :ok_hand: para %%DJ%%.",
+               "%%USER%% disse: Que hino! para %%DJ%%.",
+               "%%USER%% disse: :ok_hand:  Q U A L I D A D E :ok_hand: para %%DJ%%.",
+               "%%USER%% disse: Música impressionante! :smiley: para %%DJ%%.",
+               "%%USER%% disse: Um hino desses, bicho. para %%DJ%%.",
+               "%%USER%% disse: Você poderia tocar essa música para mim, %%DJ%%."
+               "%%USER%% disse: Close certo! para %%DJ%%.",
+               "%%USER%% disse: Já quero o #1 na Hot 100. para %%DJ%%.",
+               "%%USER%% disse: Não há melhor opção. :clap:  para %%DJ%%.",
+               "%%USER%% disse: Porra, bicho. Que hino! para %%DJ%%.",
+               "%%USER%% disse: Adoro!!! :heart: para %%DJ%%.",
+               "%%USER%% disse: Muito bom! para %%DJ%%.",
+               "%%USER%% disse: Adoro essa música! :heart: para %%DJ%%.",
+               "%%USER%% disse: Essa música sempre fica na minha memória. :heart: para %%DJ%%.",
+               "%%USER%% disse: Essa é foda! :sunglasses: para %%DJ%%.",
+               "%%USER%% disse: Maluco brabo! para %%DJ%%.",
+               "%%USER%% disse: Música linda mesmo! para %%DJ%%.",
+               "%%USER%% disse: É 10/10. para %%DJ%%.",
+               "%%USER%% disse: :sparkles: B :sparkles: E :sparkles: R :sparkles: R :sparkles: O :sparkles: para %%DJ%%."
     ];
 	/*const modules = {
 		roomInfo: _.find(require.s.contexts._.defined,m=>m&&m.attributes&&m.attributes.shouldCycle)
