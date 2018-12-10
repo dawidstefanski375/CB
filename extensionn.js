@@ -1439,8 +1439,8 @@
 		var settings = {
 		botName: "BlexBot",
 		language: "portuguese",
-		chatLink: "https://rawgit.com/dawidstefanski375/CB/master/pt-BR.json",
-		scriptLink: "https://rawgit.com/dawidstefanski375/CB/master/extensionn.js",
+		chatLink: "https://raw.githack.com/dawidstefanski375/CB/master/pt-BR.json",
+		scriptLink: "https://raw.githack.com/dawidstefanski375/CB/master/extensionn.js",
 		playLive: true,
 		roomLock: false,
 		startupCap: 1,
@@ -1450,7 +1450,7 @@
 		autoskip: true,
 		smartSkip: true,
 		cmdDeletion: true,
-		afkRemoval: true,
+		afkRemoval: false,
 		maximumAfk: 120,
 		afkpositionCheck: 50,
 		afkRankCheck: "admin",
@@ -1468,7 +1468,7 @@
 		timeGuard: true,
 		strictTimeGuard: false,	
 		maximumSongLength: 6.5,
-		autodisable: true,
+		autodisable: false,
 		commandCooldown: 5,
 		usercommandsEnabled: true,
 		thorCommand: true,
@@ -1504,12 +1504,12 @@
 		commandLiteral: "!",
 		blacklists: {
 			NSFW: null,
-			OP: "https://rawgit.com/dawidstefanski375/CB/master/OPlist.json",
-			BANNED: "https://rawgit.com/dawidstefanski375/CB/master/BANNEDlist.json"
+			OP: "https://raw.githack.com/dawidstefanski375/CB/master/OPlist.json",
+			BANNED: "https://raw.githack.com/dawidstefanski375/CB/master/BANNEDlist.json"
 		}
 	};
 	settings.intervalMessages.push('Join us on discord ! '+settings.discordLink);
 	localStorage.setItem('basicBotsettings', JSON.stringify(settings));
 
-	$.getScript("https://rawgit.com/dawidstefanski375/CB/master/basicBot.js", extend);
+	$.getScript("https://raw.githack.com/dawidstefanski375/CB/master/basicBot.js", extend);
 }).call(this);
