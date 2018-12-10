@@ -113,7 +113,7 @@
 
     var loadChat = function(cb) {
         if (!cb) cb = function() {};
-        $.get('https://rawgit.com/DavidStefansky/Blex-Bot/master/langIndex.json', function(json) {
+        $.get('https://raw.githack.com/DavidStefansky/Blex-Bot/master/langIndex.json', function(json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -251,9 +251,9 @@
         status: false,
         name: 'BlexBot',
         loggedInID: null,
-        scriptLink: 'https://rawgit.com/DavidStefansky/Blex-Bot/master/Blex-Bot.jss',
+        scriptLink: 'https://raw.githack.com/DavidStefansky/Blex-Bot/master/Blex-Bot.jss',
         cmdLink: 'https://goo.gl/7GCWJe',
-        chatLink: 'https://rawgit.com/DavidStefansky/Blex-Bot/master/pt-BR.json',
+        chatLink: 'https://raw.githack.com/DavidStefansky/Blex-Bot/master/pt-BR.json',
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -261,8 +261,8 @@
         settings: {
             botName: 'BlexBot',
             language: 'portuguese',
-            chatLink: 'https://rawgit.com/DavidStefansky/Blex-Bot/master/pt-BR.json',
-            scriptLink: 'https://rawgit.com/DavidStefansky/Blex-Bot/master/Blex-Bot.js',
+            chatLink: 'https://raw.githack.com/DavidStefansky/Blex-Bot/master/pt-BR.json',
+            scriptLink: 'https://raw.githack.com/DavidStefansky/Blex-Bot/master/Blex-Bot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -326,9 +326,9 @@
             songstats: false,
             commandLiteral: '!',
             blacklists: {
-                NSFW: 'https://rawgit.com/stiefanow89/CB/master/blacklists/NSFWlist.json',
-                OP: 'https://rawgit.com/stiefanow89/CB/master/OPlist.json',
-                BANNED: 'https://rawgit.com/stiefanow89/CB/master/BANNEDlist.json'
+                NSFW: 'https://raw.githack.com/stiefanow89/CB/master/blacklists/NSFWlist.json',
+                OP: 'https://raw.githack.com/stiefanow89/CB/master/OPlist.json',
+                BANNED: 'https://raw.githack.com/stiefanow89/CB/master/BANNEDlist.json'
             }
 },
         room: {
