@@ -738,7 +738,7 @@
 					var ch = '/me @' + name + ' ';
 
 					if (lang === 'en') {
-						ch += 'Please, speak either French or English.';
+						ch += 'Please, speak either Portuguese or English.';
 						API.sendChat(ch);
 					} else {
 						$.ajax({
