@@ -284,7 +284,8 @@
     "nousercantadas": "\/me N\u00e3o vejo %%NAME%% na sala.",
     "cantadas": "\/me %%NAMEFROM%% lança chaveco: %%CANTADAS%% @%%NAMETO%%",
     "aplauso": "\/me @%%NAMETO%% %%APLAUSO%% ",
-    "chato": "\/me @%%NAMETO%% %%CHATO%% "
+    "chato": "\/me @%%NAMETO%% %%CHATO%% ",
+    "dcinfo": "/me Do !dc if you have recently disconnected to get your position on the waitlist back!"
 
     
    
