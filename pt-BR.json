@@ -219,7 +219,7 @@
     "cycleguardtime": "\/me [@%%NAME%%] A prote\u00e7\u00e3o de ciclo agora \u00e9: %%TIME%% minuto(s).",
     "dclookuprank": "\/me [@%%NAME%%] Somente Seguran\u00e7as ou superiores podem usar !dclookup em outros usu\u00e1rios.",
     "emojilist": "\/me Emojis: %%LINK%%",
-    "emotesrcs": "\/me Emojis RCS: %%LINK%%",
+    "emojircs": "\/me Emojis RCS: %%LINK%%",
     "notinwaitlist": "\/me @%%NAME%%, voc\u00ea n\u00e3o est\u00e1 na lista de espera.",
     "youarenext": "\/me @%%NAME%%, voc\u00ea tocar\u00e1 depois desta m\u00fasica.",
     "youaredj": "\/me @%%NAME%%, voc\u00ea est\u00e1 tocando.",
