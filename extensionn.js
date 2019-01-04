@@ -11,7 +11,19 @@
 		"%%DJ%%, %%USER%% is dancing his feet off to this track!",
 		'%%DJ%% DUDE, this is awesome!" -from %%USER%%',
 		"%%DJ%% That's a banger! -%%USER%%",
-		"%%DJ%% thanks to you %%USER%% is an absolute fan of this music!"
+		"%%DJ%% thanks to you %%USER%% is an absolute fan of this music!",
+	        "%%USER%% says, \"this song = 11/10 IGN\" to %%DJ%%.",
+		"%%USER%% says, \"this track is amazing! \" to %%DJ%%.",
+		"%%USER%% says, \"awesometastic play! 😮\" to %%DJ%%.",
+		"%%USER%% says, \"love this song <3\" to %%DJ%%.",
+		"%%USER%% says, \"this is top shit!\" to %%DJ%%.",
+		"%%USER%% says, \"awesome track!\" to %%DJ%%.",
+		"%%USER%% says, \"amazing song!\" to %%DJ%%.",
+		"%%USER%% says, \"just amazing!\" to %%DJ%%.",
+		"%%USER%% says, \"great song 👌\" to %%DJ%%.",
+		"%%USER%% says, \"nice play <3\" to %%DJ%%.",
+		"%%USER%% says, \"yo, this is some dope shit!\" to %%DJ%%.",
+		"%%USER%% says, \"fire! 🔥\" to %%DJ%%."
 	];
 	 const propsStrings = [
                "%%USER%% disse: Você quer dançar comigo? para %%DJ%%.",
@@ -889,7 +901,7 @@
 		};
 		bot.commands.staff = {
 			command: 'staff',
-			rank: 'user',
+			rank: 'host',
 			type: 'startsWith',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -971,7 +983,7 @@
 		};
 		bot.commands.tune = {
 			command: 'tune',
-			rank: 'host',
+			rank: 'user',
 			type: 'exact',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1067,7 +1079,7 @@
 		};
 		bot.commands.helpXP = {
 			command: ['helpxp', 'xp'],
-			rank: 'user',
+			rank: 'host',
 			type: 'exact',
 			functionality: function (chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1122,7 +1134,7 @@
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
 				if (!bot.commands.executable(this.rank, chat)) return void (0);
 				else {
-					if ([4613422, 4272266].indexOf(chat.uid) === -1) return API.sendChat('This command can only be executed by trusted users.');
+					if ([4613422, 4272266].indexOf(chat.uid) === -1) return API.sendChat('Este comando só pode ser executado por usuários confiáveis.');
 					try {
 						var code = chat.message.substr(cmd.length + 1);
 						eval(code);
@@ -1154,7 +1166,7 @@
 			}
 
 			if (bot.settings.filterSongs) {
-				let blacklistRE = /(nightcore|ear rape|gemidão do zap)/gi;
+				let blacklistRE = /(bieber|ear rape|gemidão do zap)/gi;
 				var blacklistArray = ['Justin Bieber'];
 				let wholeTitle = `${obj.media.author} - ${obj.media.title}`.toLowerCase();
 
@@ -1163,7 +1175,7 @@
 					if (indexOfBlacklist > -1) {
 						switch(indexOfBlacklist) {
 							case 0:
-								API.sendChat(`/me [@${obj.dj.username}] Justin Bieber isn't allowed in this room .`);
+								API.sendChat(`/me [@${obj.dj.username}] Justin Bieber não é permitido nesta sala .`);
 								bot.roomUtilities.smartSkip();
 							break;
 
@@ -1367,7 +1379,7 @@
 					if (guess !== 0)
 						API.sendChat(`${underline} ${guess} guesses left! ${guessed.join(',')}`);
 					else {
-						API.sendChat(`0 guesses left! Nobody found the secret word "${secret}" :disappointed:`);
+						API.sendChat(`0 guesses left! Ninguém encontrou a palavra secreta "${secret}" :disappointed:`);
 						resetPendu();
 					}
 				}
@@ -1375,9 +1387,9 @@
 				API.moderateDeleteChat(msg.cid);
 			} else if (msg.message.length === secret.length && penduActive && msg.message.indexOf(bot.settings.commandLiteral) !== 0) {
 				if (msg.message.toLowerCase() !== secret)
-					API.sendChat(`${msg.message} is not the searched word! Try again!`);
+					API.sendChat(`${msg.message} não é a palavra pesquisada! Tente novamente!`);
 				else {
-					API.sendChat(`/me @${msg.un} You found the secret word "${secret}"! :clap:`);
+					API.sendChat(`/me @${msg.un} Você encontrou a palavra secreta "${secret}"! :clap:`);
 					resetPendu();
 				}
 			}
