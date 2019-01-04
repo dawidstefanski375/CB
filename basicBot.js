@@ -31,6 +31,8 @@
         clearInterval(basicBot.room.autodisableInterval);
         clearInterval(basicBot.room.afkInterval);
         clearInterval(basicBot.room.autorouletteInterval);
+        clearInterval(basicBot.room.autodiscordInterval);
+        clearInterval(basicBot.room.autofbInterval);
         basicBot.status = false;
     };
 
@@ -353,7 +355,19 @@
                 if (basicBot.status && basicBot.settings.autoroulette) {
                     API.sendChat('!roulette');
                 }
-           },         
+           },  
+            autofbInterval: null,
+            autofbFunc: function () {
+                if (basicBot.status && basicBot.settings.autofb) {
+                    API.sendChat('!fb');
+                }
+            },
+            autodiscordInterval: null,
+            autodiscordFunc: function () {
+                if (basicBot.status && basicBot.settings.autodiscord) {
+                    API.sendChat('!discordlive');
+                }
+            },
             queueing: 0,
             queueable: true,
             currentDJID: null,
@@ -1477,6 +1491,12 @@
                 var wlIndex = API.getWaitListPosition(basicBot.room.users[ind].id) + 1;
                 basicBot.userUtilities.updatePosition(basicBot.room.users[ind], wlIndex);
             }
+            basicBot.room.autofbInterval = setInterval(function () {
+                basicBot.room.autofbFunc();
+            }, 1000 * 60 * 67);
+            basicBot.room.autodiscordInterval = setInterval(function () {
+                basicBot.room.autodiscordFunc();
+            }, 1000 * 60 * 33);
             basicBot.room.afkInterval = setInterval(function() {
                 basicBot.roomUtilities.afkCheck()
             }, 10 * 1000);
@@ -1847,6 +1867,97 @@
                     }
                 }
             },
+         
+            autodiscordCommand: {
+                command: 'autodiscord',
+                rank: 'bouncer',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (basicBot.settings.autodiscord) {
+                            basicBot.settings.autodiscord = !basicBot.settings.autodiscord;
+                            return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.autodiscord}));
+                        }
+                        else {
+                            basicBot.settings.autodiscord = !basicBot.settings.autodiscord;
+                            return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.autodiscord}));
+                        }
+
+                    }
+                }
+            },
+         
+            autofbCommand: {
+                command: 'autofb',
+                rank: 'bouncer',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (basicBot.settings.autofb) {
+                            basicBot.settings.autofb = !basicBot.settings.autofb;
+                            return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.autofb}));
+                        }
+                        else {
+                            basicBot.settings.autofb = !basicBot.settings.autofb;
+                            return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.autofb}));
+                        }
+
+                    }
+                }
+            },
+         
+            autosCommand: {
+                command: 'autos',
+                rank: 'bouncer',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var from = chat.un;
+                        var msg = '[@' + from + '] ';
+
+                        msg += basicBot.chat.autodisable + ': ';
+                        if (basicBot.settings.autodisable) msg += 'ON';
+                        else msg += 'OFF';
+                        msg += '. ';
+
+                        msg += basicBot.chat.autodiscord + ': ';
+                        if (basicBot.settings.autodiscord) msg += 'ON';
+                        else msg += 'OFF';
+                        msg += '. ';
+
+                        msg += basicBot.chat.autofb + ': ';
+                        if (basicBot.settings.autofb) msg += 'ON';
+                        else msg += 'OFF';
+                        msg += '. ';
+                     
+                        msg += basicBot.chat.autoroulette + ': ';
+                        if (basicBot.settings.autoroulette) msg += 'ON';
+                        else msg += 'OFF';
+                        msg += '. ';
+                     
+                        if (msg.length > 250){
+                        var split = msg.match(/.{1,250}/g);
+                             for (var i = 0; i < split.length; i++) {
+                                 var func = function(index) {
+                                     setTimeout(function() {
+                                        API.sendChat("/me " + split[index]);
+                                    }, 500 * index);
+                                }
+                                func(i);
+                            }
+                        }
+                        else {
+                            return API.sendChat(msg);
+                        }
+                    }
+                }
+            },         
 
             baCommand: {
                 command: 'ba',
@@ -1912,7 +2023,7 @@
 
             blacklistCommand: {
                 command: ['blacklist', 'bl'],
-                rank: 'bouncer',
+                rank: 'host',
                 type: 'startsWith',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
@@ -3567,7 +3678,7 @@
 
             sourceCommand: {
                 command: 'source',
-                rank: 'user',
+                rank: 'host',
                 type: 'exact',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
