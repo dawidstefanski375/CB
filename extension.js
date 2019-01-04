@@ -11,7 +11,19 @@
 		"%%DJ%%, %%USER%% is dancing his feet off to this track!",
 		'%%DJ%% DUDE, this is awesome!" -from %%USER%%',
 		"%%DJ%% That's a banger! -%%USER%%",
-		"%%DJ%% thanks to you %%USER%% is an absolute fan of this music!"
+		"%%DJ%% thanks to you %%USER%% is an absolute fan of this music!",
+	        "%%USER%% says, \"this song = 11/10 IGN\" to %%DJ%%.",
+		"%%USER%% says, \"this track is amazing! \" to %%DJ%%.",
+		"%%USER%% says, \"awesometastic play! 😮\" to %%DJ%%.",
+		"%%USER%% says, \"love this song <3\" to %%DJ%%.",
+		"%%USER%% says, \"this is top shit!\" to %%DJ%%.",
+		"%%USER%% says, \"awesome track!\" to %%DJ%%.",
+		"%%USER%% says, \"amazing song!\" to %%DJ%%.",
+		"%%USER%% says, \"just amazing!\" to %%DJ%%.",
+		"%%USER%% says, \"great song 👌\" to %%DJ%%.",
+		"%%USER%% says, \"nice play <3\" to %%DJ%%.",
+		"%%USER%% says, \"yo, this is some dope shit!\" to %%DJ%%.",
+		"%%USER%% says, \"fire! 🔥\" to %%DJ%%."
     ];
     const propsStrings = [
         "%%USER%% disse, Ótima musica :ok_hand: para %%DJ%%.",
