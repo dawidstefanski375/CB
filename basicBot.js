@@ -2502,7 +2502,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
                         var link = 'https://rcs.radiant.dj/emotes';
-                        API.sendChat(subChat(basicBot.chat.emojilist, {
+                        API.sendChat(subChat(basicBot.chat.emojircslist, {
                             link: link
                         }));
                     }
