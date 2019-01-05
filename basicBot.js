@@ -1795,6 +1795,27 @@
                     }
                 }
             },
+         
+            aplausosCommand: {
+                command: 'aplausos',
+                rank: 'user',
+                type: 'startsWith',
+                getAplausos: function(chat) {
+                    var a = Math.floor(Math.random() * basicBot.chat.aplausos.length);
+                    return basicBot.chat.aplausos[a];
+                },
+                functionality: function(chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
+                    else {
+                        var msg = chat.message;
+                        var space = msg.indexOf(' ');
+                        var name = msg.substring(space + 2);
+                        var user = basicBot.userUtilities.lookupUserName(name);
+                        return API.sendChat(subChat(basicBot.chat.aplauso, {nameto: user.username, namefrom: chat.un, aplauso: this.getAplausos()}));
+                            }
+                         }           
+                    },                
 
             autodisableCommand: {
                 command: 'autodisable',
