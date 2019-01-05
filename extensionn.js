@@ -15,13 +15,13 @@
 	        "%%USER%% says, \"this song = 11/10 IGN\" to %%DJ%%.",
 		"%%USER%% says, \"this track is amazing! \" to %%DJ%%.",
 		"%%USER%% says, \"awesometastic play! 😮\" to %%DJ%%.",
-		"%%USER%% says, \"love this song <3\" to %%DJ%%.",
+		"%%USER%% says, \"love this song ❤️\" to %%DJ%%.",
 		"%%USER%% says, \"this is top shit!\" to %%DJ%%.",
 		"%%USER%% says, \"awesome track!\" to %%DJ%%.",
 		"%%USER%% says, \"amazing song!\" to %%DJ%%.",
 		"%%USER%% says, \"just amazing!\" to %%DJ%%.",
 		"%%USER%% says, \"great song 👌\" to %%DJ%%.",
-		"%%USER%% says, \"nice play <3\" to %%DJ%%.",
+		"%%USER%% says, \"nice play ❤️\" to %%DJ%%.",
 		"%%USER%% says, \"yo, this is some dope shit!\" to %%DJ%%.",
 		"%%USER%% says, \"fire! 🔥\" to %%DJ%%."
 	];
