@@ -33,6 +33,7 @@
         clearInterval(basicBot.room.autorouletteInterval);
         clearInterval(basicBot.room.autodiscordInterval);
         clearInterval(basicBot.room.autofbInterval);
+        clearInterval(basicBot.room.autodcinfoInterval);
         basicBot.status = false;
     };
 
@@ -290,6 +291,10 @@
             maximumSongLength: 10,
             autodisable: false,
             autoroulette: true,
+            autofb: true,
+            autodiscord: true,
+            autofb: true,
+            autodcinfo: true,
             commandCooldown: 30,
             usercommandsEnabled: true,
             thorCommand: false,
@@ -361,6 +366,12 @@
                 if (basicBot.status && basicBot.settings.autofb) {
                     API.sendChat('!fb');
                 }
+           },  
+            autodcinfoInterval: null,
+            autodcinfoFunc: function () {
+                if (basicBot.status && basicBot.settings.autodcinfo) {
+                    API.sendChat('!dcinfo');
+                }             
             },
             autodiscordInterval: null,
             autodiscordFunc: function () {
@@ -1494,8 +1505,11 @@
             basicBot.room.autofbInterval = setInterval(function () {
                 basicBot.room.autofbFunc();
             }, 1000 * 60 * 67);
-            basicBot.room.autodiscordInterval = setInterval(function () {
-                basicBot.room.autodiscordFunc();
+            basicBot.room.autofbInterval = setInterval(function () {
+                basicBot.room.autofbFunc();
+            }, 1000 * 60 * 93);         
+            basicBot.room.autodcinfoInterval = setInterval(function () {
+                basicBot.room.autodcinfoFunc();
             }, 1000 * 60 * 33);
             basicBot.room.afkInterval = setInterval(function() {
                 basicBot.roomUtilities.afkCheck()
@@ -1910,6 +1924,27 @@
                 }
             },
          
+            autodcinfoCommand: {
+                command: 'autodcinfo',
+                rank: 'bouncer',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (basicBot.settings.autodcinfo) {
+                            basicBot.settings.autodcinfo = !basicBot.settings.autodcinfo;
+                            return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.autodcinfo}));
+                        }
+                        else {
+                            basicBot.settings.autodcinfo = !basicBot.settings.autodcinfo;
+                            return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.autodcinfo}));
+                        }
+
+                    }
+                }
+            },         
+         
             autosCommand: {
                 command: 'autos',
                 rank: 'bouncer',
@@ -1925,6 +1960,11 @@
                         if (basicBot.settings.autodisable) msg += 'ON';
                         else msg += 'OFF';
                         msg += '. ';
+                     
+                        msg += basicBot.chat.autodcinfo + ': ';
+                        if (basicBot.settings.autodcinfo) msg += 'ON';
+                        else msg += 'OFF';
+                        msg += '. ';                     
 
                         msg += basicBot.chat.autodiscord + ': ';
                         if (basicBot.settings.autodiscord) msg += 'ON';
