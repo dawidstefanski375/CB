@@ -286,7 +286,7 @@
     "cantadas": "\/me %%NAMEFROM%% lança chaveco: %%CANTADAS%% @%%NAMETO%%",
     "aplauso": "\/me @%%NAMETO%% %%APLAUSO%% ",
     "chato": "\/me @%%NAMETO%% %%CHATO%% ",
-    "dcinfo": "/me Do !dc if you have recently disconnected to get your position on the waitlist back!"
+    "dcinfo": "/me Digite !dc se você desconectou recentemente para recuperar sua posição na lista de espera! https://i.imgur.com/yuCDZjY.png"
 
     
    
