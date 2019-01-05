@@ -996,7 +996,7 @@
 					var string = tuneStrings[Math.floor(Math.random()*tuneStrings.length)];
 
 					// Self tuning your own track are you ?
-					if (users.dj.substr(1) === users.user) return API.sendChat('/me Le bloc opératoire N°404 est disponible pour une ablation de côtes ' + users.dj + '.');
+					if (users.dj.substr(1) === users.user) return API.sendChat('me Não seja cabeçudo(a)!Voce não pode elogiar sua própria música ${users.dj}.');
 
 					for (var key in users) {
 						string = string.split('%%'+key.toUpperCase()+'%%').join(users[key]);
