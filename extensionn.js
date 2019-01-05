@@ -1167,7 +1167,7 @@
 
 			if (bot.settings.filterSongs) {
 				let blacklistRE = /(bieber|ear rape|gemidão do zap)/gi;
-				var blacklistArray = ['Justin Bieber'];
+				var blacklistArray = ['justin bieber, bieber'];
 				let wholeTitle = `${obj.media.author} - ${obj.media.title}`.toLowerCase();
 
 				wholeTitle.split(blacklistRE).forEach((word) => {
