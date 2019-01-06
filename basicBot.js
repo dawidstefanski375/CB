@@ -327,7 +327,7 @@
             website: "https://goo.gl/GwPe67",
             intervalMessages: [],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: '!',
             blacklists: {
                 NSFW: 'https://raw.githack.com/dawidstefanski375/CB/master/blacklists/NSFWlist.json',
@@ -376,7 +376,7 @@
             autodiscordInterval: null,
             autodiscordFunc: function () {
                 if (basicBot.status && basicBot.settings.autodiscord) {
-                    API.sendChat('!discordlive');
+                    API.sendChat('!discord');
                 }
             },
             queueing: 0,
