@@ -322,7 +322,6 @@
             rulesLink: "https://goo.gl/gmUfgq",
             themeLink: null,
             fbLink: null,
-            discordLink: "https://discord.gg/XswrXbV",
             youtubeLink: null,
             emotesLink: "https://goo.gl/tZZ4G6",         
             website: "https://goo.gl/GwPe67",
@@ -1503,15 +1502,15 @@
                 var wlIndex = API.getWaitListPosition(basicBot.room.users[ind].id) + 1;
                 basicBot.userUtilities.updatePosition(basicBot.room.users[ind], wlIndex);
             }
+            basicBot.room.autodiscord = setInterval(function () {
+                basicBot.room.autodiscordFunc();
+            }, 1000 * 60 * 58);
             basicBot.room.autofbInterval = setInterval(function () {
                 basicBot.room.autofbFunc();
-            }, 1000 * 60 * 67);
-            basicBot.room.autofbInterval = setInterval(function () {
-                basicBot.room.autofbFunc();
-            }, 1000 * 60 * 93);         
+            }, 1000 * 60 * 66);         
             basicBot.room.autodcinfoInterval = setInterval(function () {
                 basicBot.room.autodcinfoFunc();
-            }, 1000 * 60 * 33);
+            }, 1000 * 60 * 77 );
             basicBot.room.afkInterval = setInterval(function() {
                 basicBot.roomUtilities.afkCheck()
             }, 10 * 1000);
