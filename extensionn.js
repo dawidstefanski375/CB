@@ -996,7 +996,7 @@
 					var string = tuneStrings[Math.floor(Math.random()*tuneStrings.length)];
 
 					// Self tuning your own track are you ?
-					if (users.dj.substr(1) === users.user) return API.sendChat('me Não seja cabeçudo(a)!Voce não pode elogiar sua própria música ${users.dj}.');
+					if (users.dj.substr(1) === users.user) return API.sendChat('m Não seja cabeçudo(a)!Voce não pode elogiar sua própria música ${users.dj}.');
 
 					for (var key in users) {
 						string = string.split('%%'+key.toUpperCase()+'%%').join(users[key]);
@@ -1502,7 +1502,7 @@
 		filterChat: true,
 		filterSongs: true,
 		etaRestriction: false,
-		welcome: true,
+		welcome: false,
 		opLink: null,
 		rulesLink: "https://goo.gl/gmUfgq",
 		themeLink: "TEMA LIVRE",
@@ -1512,7 +1512,7 @@
 		website: "https://goo.gl/azYtb9",
 		intervalMessages: [],
 		messageInterval: 0,
-		songstats: false,
+		songstats: true,
 		commandLiteral: "!",
 		blacklists: {
 			NSFW: null,
