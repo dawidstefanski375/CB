@@ -252,7 +252,7 @@
     "unmuted": "[@%%NAME%%] @%%USERNAME%% desmutado.",
     "muterank": "[@%%NAME%%] Voc\u00ea n\u00e3o pode mutar usu\u00e1rios do mesmo n\u00edvel ou superior.",
     "oplist": "LISTA NEGRA: %%LINK%% :no_entry_sign:",
-    "pong": "\/me Pong!",
+    "pong": "Pong!",
     "rcsinfo": "Para visualizar o tema personalizado da sala, dar autowoot nas músicas e muito mais, instale a extensão RCS aqui: https:\/\/rcs.radiant.dj\/",
     "reload": "Reiniciando...",
     "removenotinwl": "[@%%NAME%%] Usu\u00e1rio @%%USERNAME%% n\u00e3o est\u00e1 na fila de espera.",
