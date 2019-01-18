@@ -274,7 +274,7 @@
     "voteratio": "\/me [@%%NAME%%] @%%USERNAME%% ~ Legals!: %%WOOT%%, Chatos: %%MEHS%%, taxa\/propor\u00e7\u00e3o (w\/m): %%RATIO%%.",
     "website": "\/me Visite nosso site: %%LINK%%",
     "youtube": "\/me [%%NAME%%] Inscreva-se no nosso canal: %%LINK%%",
-    "songstatistics": "Last Played: %%ARTIST%% - %%TITLE%% :cd: %%NAME%% :bust_in_silhouette: %%LENGTH%% :blue_heart: %%WOOTS%% :broken_heart: %%MEHS%% :star: %%GRABS%%",
+    "songstatistics": "Last Played: %%ARTIST%% - %%TITLE%% :cd: %%NAME%% :blue_heart: %%WOOTS%% :broken_heart: %%MEHS%% :star: %%GRABS%%",
     "thorNotClose": "\/me @%%NAME%% Deixa de ser cara de pau e entre na fila para depois tentar furar!",
     "thorcd": "\/me @%%NAME%% Que feio! Voce ainda não pode furar a fila, tente em %%TIME%% minutos.",
     "thorWorthy": "\/me @%%NAME%% Espertinho(a) conseguiu furar o 2º lugar na fila! :aww:",
