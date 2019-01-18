@@ -1502,7 +1502,7 @@
 		filterChat: true,
 		filterSongs: true,
 		etaRestriction: false,
-		welcome: false,
+		welcome: true,
 		opLink: null,
 		rulesLink: "https://goo.gl/gmUfgq",
 		themeLink: "TEMA LIVRE",
@@ -1512,7 +1512,7 @@
 		website: "https://goo.gl/azYtb9",
 		intervalMessages: [],
 		messageInterval: 0,
-		songstats: true,
+		songstats: false,
 		commandLiteral: "!",
 		blacklists: {
 			NSFW: null,
