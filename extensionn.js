@@ -891,7 +891,7 @@
 				if (!bot.commands.executable(this.rank, chat)) return void (0);
 				else {
 					var msg = chat.message;
-					if (msg.length === cmd.length) return API.sendChat("Eu sou realmente um bot :robot_face: ");
+					if (msg.length === cmd.length) return API.sendChat("/me Eu sou realmente um bot :robot_face: ");
 					var name = msg.substr(cmd.length + 1);
 					if (msg.length > cmd.length + 1) {
 						API.sendChat("/me " + name + ", Eu sou um bot, você pode tentar falar comigo, mas eu não vou responder a menos que você use comandos :robot_face: ");
