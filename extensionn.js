@@ -1097,7 +1097,7 @@
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
 				if (!bot.commands.executable(this.rank, chat)) return void (0);
 				else {
-					API.sendChat('Fique por dentro de tudo que acontece na comunidade! Participe do Discord: ' + bot.settings.discordLink);
+					API.sendChat('/me Fique por dentro de tudo que acontece na comunidade! Participe do Discord: ' + bot.settings.discordLink);
 				}
 			}
 		};
