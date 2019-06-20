@@ -327,7 +327,7 @@
             website: "https://goo.gl/GwPe67",
             intervalMessages: [],
             messageInterval: 5,
-            songstats: false,
+            songstats: true,
             commandLiteral: '!',
             blacklists: {
                 NSFW: 'https://raw.githack.com/dawidstefanski375/CB/master/blacklists/NSFWlist.json',
