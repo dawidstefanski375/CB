@@ -1512,7 +1512,7 @@
 		website: "https://goo.gl/azYtb9",
 		intervalMessages: [],
 		messageInterval: 0,
-		songstats: false,
+		songstats: true,
 		commandLiteral: "!",
 		blacklists: {
 			NSFW: null,
