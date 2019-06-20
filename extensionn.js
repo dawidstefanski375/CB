@@ -347,7 +347,7 @@
 					getCurrentLive(callback);
 					errorState = 1;
 				} else {
-					API.sendChat('/me [Error @WiBla] Could not get Current live.');
+					API.sendChat('/me [Error @Outs1d3er] Could not get Current live.');
 				}
 			}
 		});
@@ -370,7 +370,7 @@
 					isUnavailable(media, callback);
 					errorState = 1;
 				} else {
-					API.sendChat('/me [Error @WiBla] Could not check live availability.');
+					API.sendChat('/me [Error @Outs1d3er] Could not check live availability.');
 				}
 			}
 		});
@@ -394,7 +394,7 @@
 					deleteMedia(media, callback);
 					errorState = 1;
 				} else {
-					API.sendChat('/me [Error @Weresz] Could not delete current live.');
+					API.sendChat('/me [Error @Outs1d3er] Could not delete current live.');
 				}
 			}
 		});
@@ -434,7 +434,7 @@
 					getNewLive(callback);
 					errorState = 1;
 				} else {
-					API.sendChat('/me [Error @Weresz] Could not get new live.');
+					API.sendChat('/me [Error @Outs1d3er] Could not get new live.');
 				}
 			}
 		});
@@ -459,7 +459,7 @@
 					addMedia(media, callback);
 					errorState = 1;
 				} else {
-					API.sendChat('/me [Error @Weresz] Could not add live.');
+					API.sendChat('/me [Error @Outs1d3er] Could not add live.');
 				}
 			}
 		});
@@ -1462,12 +1462,12 @@
 		autoskip: true,
 		smartSkip: true,
 		cmdDeletion: true,
-		afkRemoval: false,
-		maximumAfk: 120,
+		afkRemoval: true,
+		maximumAfk: 60,
 		afkpositionCheck: 50,
 		afkRankCheck: "admin",
 		maximumDc: 120,
-		bouncerPlus: true,
+		bouncerPlus: false,
 		blacklistEnabled: true,
 		lockdownEnabled: false,
 		lockGuard: false,
@@ -1479,8 +1479,8 @@
 		historySkip: true,
 		timeGuard: true,
 		strictTimeGuard: false,	
-		maximumSongLength: 6.5,
-		autodisable: false,
+		maximumSongLength: 8,
+		autodisable: true,
 		commandCooldown: 5,
 		usercommandsEnabled: true,
 		thorCommand: true,
