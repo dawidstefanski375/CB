@@ -1845,7 +1845,7 @@
          
             autorouletteCommand: {
                 command: 'autoroulette',
-                rank: 'cohost',
+                rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -3613,7 +3613,7 @@
 
             rouletteCommand: {
                 command: 'roulette',
-                rank: 'cohost',
+                rank: 'mod',
                 type: 'exact',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
