@@ -6,6 +6,10 @@ Blex-Bot A chat bot used in the Brazil Lounge Exclusive plug.dj community. The b
 javascript:(function(){$.getScript('https://raw.githack.com/dawidstefanski375/CB/master/extensionn.js');})();
 
 
+javascript:(function(){$.getScript('https://raw.githack.com/DavidStefansky/Brazil-Lounge-Exclusive/master/teste-bot/extension.js%27);%7D)();
+
+
+
 
 
 
