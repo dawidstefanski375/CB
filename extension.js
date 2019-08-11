@@ -28,14 +28,10 @@
     const propsStrings = [
         "%%USER%% disse, Ótima musica :ok_hand: para %%DJ%%.",
         "%%USER%% disse, Que hino para %%DJ%%.",
-        "%%USER%% disse, Tragam o martelo ele é digno(a)!!! :clap::hammer: para %%DJ%%.",
-        "%%USER%% disse, :white_check_mark: Q U A L I D A D E :white_check_mark:. para %%DJ%%.",
         "%%USER%% disse, Humm você não se importaria se eu roubasse essa maravilha, né?! para %%DJ%%.",
         "%%USER%% disse, Um clássico! :ok_hand: para %%DJ%%.",
-        "%%USER%% disse, Essa é xou de bola :thumbsup: para %%DJ%%.",
+        "%%USER%% disse, Essa é show de bola :thumbsup: para %%DJ%%.",
         "%%USER%% disse, Isso que eu chamo de música atemporal :clap: para %%DJ%%.",
-        "%%USER%% disse, Parabéns, tragam o troféu Music Awards!!! :minidisc::clap: para %%DJ%%.",
-        "%%USER%% disse, Ta linia melodyczna ma po prostu kurwa moc! :sunglasses: para %%DJ%%.",
         "%%USER%% disse, Já quero o #1 na Hot 100 :fire: para %%DJ%%.",
         "%%USER%% disse, Que delícia de música é essa cara? :ok_hand::yum: para %%DJ%%.",
         "%%USER%% disse, Não há melhor opção :thumbsup: para %%DJ%%.",
@@ -45,10 +41,8 @@
         "%%USER%% disse, Adoro essa musica :purple_heart: para %%DJ%%.",
         "%%USER%% disse, Essa musica sempre fica na minha memória :purple_heart: para %%DJ%%.",
         "%%USER%% disse, :point_left: Essa  é foda! para %%DJ%%.",
-        "%%USER%% disse, Esse é um verdadeiro pedaço de boa merda! :shit::purple_heart: para %%DJ%%.",
         "%%USER%% disse, Melhor EARGASM :weary: para %%DJ%%.",
         "%%USER%% disse, É 10/10 :fire: para %%DJ%%.",
-        "%%USER%% disse, Que sonzão da porra!!! para %%DJ%%."
     ];
 	/*const modules = {
 		roomInfo: _.find(require.s.contexts._.defined,m=>m&&m.attributes&&m.attributes.shouldCycle)
