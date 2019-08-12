@@ -1046,7 +1046,7 @@
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
 				if (!bot.commands.executable(this.rank, chat)) return void (0);
 				else {
-					API.sendChat('Lembre-se de clicar na estrela na barra superior para favoritar essa sala! https://i.imgur.com/zI5qtAi.png');
+					API.sendChat('Lembre-se de clicar na estrela na barra superior para favoritar essa sala! https://i.imgur.com/v2bx0wY.png');
 				}
 			}
 		};
