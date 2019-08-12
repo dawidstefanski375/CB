@@ -128,7 +128,7 @@
     "greyuser": "Apenas Seguran\u00e7as ou superiores podem usar o bot.",
     "bouncer": "O bot n\u00e3o pode mover pessoas na fila de espera quando usado por um bouncer.",
     "online": "",
-    "welcome": "\/me :hearts: Bem vindo(a), @%%NAME%%! Regras: https://goo.gl/gmUfgq",
+    "welcome": "\/me :heart: Bem vindo(a), @%%NAME%%! Regras: https://t.ly/qjqVD",
     "welcomeback": "\/me :v: Bem vindo(a) de volta, @%%NAME%%",
     "songknown": "\/me @%%NAME%%, essa m\u00fasica est\u00e1 no hist\u00f3rico.",
     "notavailable": "\/me @%%NAME%%, Sua música não está disponível ou foi removida por violação de direitos autorais. Atualize sua lista de reprodução.",
@@ -286,7 +286,7 @@
     "cantadas": "\/me %%NAMEFROM%% lança chaveco: %%CANTADAS%% @%%NAMETO%%",
     "aplauso": "\/me @%%NAMETO%% %%APLAUSO%% ",
     "chato": "\/me @%%NAMETO%% %%CHATO%% ",
-    "dcinfo": "/me Digite !dc se você desconectou recentemente para recuperar sua posição na lista de espera! https://i.imgur.com/yuCDZjY.png"
+    "dcinfo": "/me Digite !dc se você desconectou recentemente para recuperar sua posição na lista de espera!"
 
     
    
