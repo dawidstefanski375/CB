@@ -1505,7 +1505,7 @@
 		themeLink: "TEMA LIVRE",
 		fbLink: "https://goo.gl/WUZGzz",
 		youtubeLink: null,
-		discordLink: "https://discord.gg/4H6V7M",
+		discordLink: "https://discord.gg/JR8yFV",
 		website: "https://t.ly/A3gYG",
 		intervalMessages: [],
 		messageInterval: 0,
