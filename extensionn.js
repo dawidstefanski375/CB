@@ -1509,7 +1509,7 @@
 		website: "https://t.ly/A3gYG",
 		intervalMessages: [],
 		messageInterval: 0,
-		songstats: true,
+		songstats: false,
 		commandLiteral: "!",
 		blacklists: {
 			NSFW: null,
