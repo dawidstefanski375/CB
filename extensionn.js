@@ -1446,7 +1446,7 @@
 	}
 
 		var settings = {
-		botName: "BlexBot",
+		botName: "Catharsis-Bot",
 		language: "portuguese",
 		chatLink: "https://raw.githack.com/dawidstefanski375/CB/master/pt-BR.json",
 		scriptLink: "https://raw.githack.com/dawidstefanski375/CB/master/extensionn.js",
