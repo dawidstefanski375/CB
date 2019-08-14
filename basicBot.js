@@ -1519,7 +1519,7 @@
             }, 60 * 60 * 1000);
             basicBot.room.autorouletteInterval = setInterval(function () {
             basicBot.room.autorouletteFunc();
-            }, 30 * 60 * 1000);
+            }, 20 * 60 * 1000);
             basicBot.loggedInID = API.getUser().id;
             basicBot.status = true;
             API.sendChat('/cap ' + basicBot.settings.startupCap);
